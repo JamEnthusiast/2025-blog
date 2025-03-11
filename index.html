@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Links in Real Life</title>
+  <!-- Google Fonts: Roboto (using lighter weights for a slim look) -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /*
+      Color Palette (approx. from your image):
+      Orange:  #F9A72B
+      Yellow:  #F7E741
+      Blue:    #82D8D8
+      Lime:    #B5D73F
+      Red:     #D64E12
+    */
+
+    /* Reset and Base Styles */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #82D8D8; /* Light Blue */
+      color: #000;              /* Black text for contrast */
+    }
+
+    /* Header */
+    header {
+      background-color: #ffe52c; /* Orange */
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #000; /* Black text for contrast against orange */
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #000;
+    }
+
+    /* Main Container: Content + Sidebar */
+    .main-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Content (Blog) Area */
+    .content {
+      flex: 1;
+      min-width: 300px;
+      max-width: 800px;
+      margin-right: 20px;
+    }
+    .content .publish-info {
+      font-size: 0.9em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Image Placeholder (top image) */
+    .image-placeholder {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .image-placeholder img {
+      max-width: 100%;
+      height: auto;
+      border: 3px solid #D64E12; /* Red border */
+    }
+
+    /* Tarot Grid: Each card has an image + Arcana name */
+    .tarot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    /* Individual Card Container */
+    .arcana-card {
+      background-color: #faa622; /* Yellowish background */
+      border: 2px solid #D64E12; /* Red border */
+      border-radius: 5px;
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Arcana Image: keeps portrait ratio, larger size */
+    .arcana-image {
+      width: 100%;
+      aspect-ratio: 3 / 4;   /* Portrait aspect ratio */
+      overflow: hidden;
+      background-color: #faa622;
+    }
+    .arcana-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Arcana Name (link) */
+    .arcana-name {
+      color: #000;
+      font-weight: 700;
+      font-size: 1.2em;
+      text-decoration: none;
+      padding: 15px 0;
+    }
+    .arcana-name:hover {
+      text-decoration: underline;
+    }
+    /* Desktop: 4 columns side by side */
+    @media (min-width: 768px) {
+      .tarot-grid {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+      }
+    }
+
+    /* Sidebar (About the Author, Contacts, etc.) */
+    .sidebar {
+      flex: 0 0 250px;
+      min-width: 250px;
+      background-color: #ffe52c;
+      border: 2px solid #D64E12;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      height: fit-content;
+    }
+    .sidebar h3 {
+      margin-top: 0;
+    }
+    .sidebar p {
+      margin-bottom: 10px;
+    }
+
+    /* Comment Section */
+    .comment-section {
+      margin-top: 40px;
+      background-color: #ffe52c;
+      border: 2px solid #D64E12;
+      border-radius: 5px;
+      padding: 20px;
+    }
+    .comment-section h3 {
+      margin-top: 0;
+    }
+    .comment-section form {
+      display: flex;
+      flex-direction: column;
+    }
+    .comment-section label {
+      margin: 5px 0 2px;
+    }
+    .comment-section input[type="text"],
+    .comment-section textarea {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .comment-section button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #faa622;
+      border: 2px solid #D64E12;
+      border-radius: 5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .comment-section button:hover {
+      background-color: #ffd477;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #ffe52c;
+      padding: 10px;
+      border-top: 3px solid #D64E12;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Social Links in Real Life: Why Making Friends Doesn't Unlock Cool Powers</h1>
+    <p>(P.S. This blog is solely made for fun and realizations I’ve had after playing the game.)</p>
+  </header>
+
+  <!-- Main Container: Content + Sidebar -->
+  <div class="main-container">
+    <!-- Blog Content Area -->
+    <div class="content">
+      <div class="publish-info">
+        <strong>Published on:</strong> March 11, 2025
+      </div>
+
+      <!-- Top Image -->
+      <div class="image-placeholder">
+        <img src="persona4sociallink.jpg" alt="All Social Link Bios from Persona 4 Golden" />
+      </div>
+
+      <p>
+        Persona 4 Golden is an exciting, unique, and wholesome JRPG with thrilling
+        mysteries. Your role as a player is to uncover these mysteries and reach
+        out to the truth! With the help of your friends—I mean NPC friends—clearing
+        the fog will not be as difficult as it may seem since these "Friends" are
+        NPCs you can converse with. What can you gain from these interactions?
+        Literal <b>superpowers</b>, you helped a brown-haired student from being
+        inconveniently stuck inside a trash can? Boom, you can now summon wind
+        ninja warrior... Or maybe you helped a troubled classmate by wearing
+        disguised glasses? Nice! You now have the ability to spread flames and
+        terror to your enemies by summoning a hybrid bird.
+      </p>
+
+      <p>
+        Meanwhile, in real life, making friends mostly just unlocks group chats
+        that will either last for only a school year or an undying source of news,
+        unpaid emotional labor, and the occasional free meal if you're lucky. So
+        why is it that in the world of Persona 4, friendship fuels your ultimate
+        power, but in reality, it mostly merely gives you someone to share memes
+        with at 2 AM? Let's break it down using tarot/arcana cards.
+      </p>
+
+      <!-- Combined Grid: Each card has an image + name below it -->
+      <div class="tarot-grid">
+        <!-- The Fool -->
+        <div class="arcana-card">
+          <div class="arcana-image">
+            <img src="thefool.jpg" alt="The Fool Arcana" />
+          </div>
+          <a href="the-fool.html" class="arcana-name">The Fool</a>
+        </div>
+
+        <!-- Magician -->
+        <div class="arcana-card">
+          <div class="arcana-image">
+            <img src="magician.jpg" alt="The Magician Arcana" />
+          </div>
+          <a href="magician.html" class="arcana-name">Magician</a>
+        </div>
+
+        <!-- Chariot -->
+        <div class="arcana-card">
+          <div class="arcana-image">
+            <img src="chariot.jpg" alt="The Chariot Arcana" />
+          </div>
+          <a href="chariot.html" class="arcana-name">Chariot</a>
+        </div>
+
+        <!-- Priestess -->
+        <div class="arcana-card">
+          <div class="arcana-image">
+            <img src="priestess.jpg" alt="The Priestess Arcana" />
+          </div>
+          <a href="priestess.html" class="arcana-name">Priestess</a>
+        </div>
+      </div>
+
+      <!-- Simple Comment Section -->
+      <div class="comment-section">
+        <h3>Leave a Comment</h3>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+          <label for="comment">Comment:</label>
+          <textarea id="comment" name="comment" rows="4" placeholder="Write your thoughts here..." required></textarea>
+
+          <button type="submit">Post Comment</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Sidebar with About the Author & Contact Info -->
+    <aside class="sidebar">
+      <h3>About the Author</h3>
+      <p><strong>Name:</strong> John Andrei Castro</p>
+      <p><strong>Email:</strong> castrojohnandrei0923</p>
+      <p>
+        A passionate JRPG fan who loves exploring the depth of social links
+        and building meaningful connections—both in games and real life.
+      </p>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 John Andrei Castro. All rights reserved.</p>
+  </footer>
+</body>
+</html>
